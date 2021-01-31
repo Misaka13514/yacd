@@ -1,6 +1,6 @@
 // manage localStorage
 
-const StorageKey = 'yacd.haishan.me';
+const StorageKey = 'yacd.atri.tk';
 
 function loadState() {
   try {

@@ -157,9 +157,16 @@ export function updateCollapsibleIsOpen(
   };
 }
 
-const defaultClashAPIConfig = {
+const defaultClashAPIConfig1 = {
   baseURL:
-    document.getElementById('app')?.getAttribute('data-base-url') ??
+    document.getElementById('app')?.getAttribute('data-base-url1') ??
+    'http://192.168.31.1:9999',
+  secret: '',
+  addedAt: 0,
+};
+const defaultClashAPIConfig2 = {
+  baseURL:
+    document.getElementById('app')?.getAttribute('data-base-url2') ??
     'http://127.0.0.1:9090',
   secret: '',
   addedAt: 0,
@@ -167,7 +174,7 @@ const defaultClashAPIConfig = {
 // type Theme = 'light' | 'dark';
 const defaultState: StateApp = {
   selectedClashAPIConfigIndex: 0,
-  clashAPIConfigs: [defaultClashAPIConfig],
+  clashAPIConfigs: [defaultClashAPIConfig1, defaultClashAPIConfig2],
 
   latencyTestUrl: 'http://www.gstatic.com/generate_204',
   selectedChartStyleIndex: 0,
